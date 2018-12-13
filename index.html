@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <title>HOME BANKING APP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <img class="logo" src="img/logo.png"/>
+      <div class="align-left">
+        <span id="nombre">Bienvenido/a</span>
+        <img class="avatar" src="img/avatar.svg"/>
+      </div>
+    </div>
+    <div class="white-container">
+      <div class="menu-container">
+        <h1 class="tu-cuenta">Tu cuenta</h1>
+        <button id="button" class="links" onclick="extraerDinero()">Extraer dinero</button>
+        <button id="button" class="links" onclick="depositarDinero()">Depositar dinero</button>
+        <button id="button" class="links" onclick="pagarServicio()">Pagar servicios</button>
+        <button id="button" class="links" onclick="transferirDinero()">Transferir dinero</button>
+        <button id="button" class="links" onclick="cambiarLimiteDeExtraccion()">Cambiar límite de extracción</button>
+      </div>
+      <div class="green-container">
+        <div class="cuenta-info">
+          <p>Saldo en tu cuenta</p>
+          <h3 id="saldo-cuenta">$</h3>
+          <p id="limite-extraccion">Tu límite de extracción es: </p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-modal">
+        <div class="modal-content">
+            <img class="img" src="img/logo.png" alt="">
+            <form action="" id="form">
+                <label>Login</label>
+                <input type="text" name="name" id="name" placeholder="Nombre de Usuario">
+                <input type="password" name="name" id="pass" placeholder="Password">
+                <button id="button-open"type="button" onclick="login()">Aceptar</button>
+            </form>
+        </div>
+    </div>
+    <div class="bg-modal-2">
+        <div class="modal-content">
+            <div id="close">+</div>
+            <img class="img" src="img/logo.png" alt="">
+            <div id="incorrect">
+                <h3 class="incorrect-pass">
+                    Clave Incorrecta hemos retenido su saldo por seguridad
+                </h3>
+                <p class="incorrect-symbol">
+                    +
+                </p>
+                <button id="button-close"type="button" onclick="login()">Aceptar</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/homebanking.js"></script>
+  </body>
+</html>
