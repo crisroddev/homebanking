@@ -7,12 +7,16 @@ function login(){
     if(verificaPass != pass){
         saldoCuenta = 0;
         const modal2 = document.querySelector('.bg-modal-2').style.display = 'flex';
-        $('#close').click();
         }
     actualizarSaldoEnPantalla();
     cargarNombreEnPantalla();
     $('#close').click();
 };
+
+//Cierro Modal pass incorect
+$('#button-close').click(function(){
+    $('.bg-modal-2').slideToggle(2000);
+});
 
 var limiteExtraccion = 500;
 var saldoCuenta = 1000000;
@@ -255,12 +259,6 @@ document.getElementById('button-open').addEventListener('click', function(){
 document.getElementById('button-open').addEventListener('click', function(){
     document.querySelector('.bg-modal').style.display = 'none';
     });
-// Cierra modal 2
-document.getElementById('button-close').addEventListener('click', function(){
-    document.querySelector('.bg-modal-2').style.display = 'none';
-    });
-
-
 
 //Funciones que actualizan el valor de las variables en el HTML, innerHTML cambia el valor en el html
 function cargarNombreEnPantalla() {
