@@ -272,27 +272,22 @@ input[type='password']{
     height: 100px;
 }
 
-#close{
-    position: absolute;
-    top: 0;
-    right: 14px;
-    font-size: 42px;
+.incorrect-symbol {
     transform: rotate(45deg);
-}
-p.incorrect-symbol {
-    transform: rotate;
-    transform: rotate(45deg);
-    font-size: 120px;
-    font-color: red;
-    padding: -2px;
-    margin: 0 auto;
+    font-size: 100px;
     color: red;
+    z-index: -999;
 }
 .incorrect-pass{
-    font-size: 20px;
+    font-size: 30px;
+    font-style: bold;
     color: red;
-
+    list-style: none;
 }
 .modal-content {
-    height: 350px;
+    height: 400px;
+    margin-top: 0px;
+}
+#button-close{
+    z-index: 999;
 }
